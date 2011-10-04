@@ -4,26 +4,26 @@ ruby-1.8.7-p352@demo1 the_demo: rails new blog
       create  Rakefile
       create  config.ru
       create  .gitignore
-      create  Gemfile
+-->   create  Gemfile
       create  app
       create  app/assets/images/rails.png
-      create  app/assets/javascripts/application.js
+-->   create  app/assets/javascripts/application.js
       create  app/assets/stylesheets/application.css
-      create  app/controllers/application_controller.rb
+-->   create  app/controllers/application_controller.rb
       create  app/helpers/application_helper.rb
       create  app/mailers
       create  app/models
-      create  app/views/layouts/application.html.erb
+-->   create  app/views/layouts/application.html.erb
       create  app/mailers/.gitkeep
       create  app/models/.gitkeep
       create  config
-      create  config/routes.rb
+-->   create  config/routes.rb
       create  config/application.rb
-      create  config/environment.rb
+-->   create  config/environment.rb
       create  config/environments
-      create  config/environments/development.rb
-      create  config/environments/production.rb
-      create  config/environments/test.rb
+-->   create  config/environments/development.rb
+-->   create  config/environments/production.rb
+-->   create  config/environments/test.rb
       create  config/initializers
       create  config/initializers/backtrace_silencers.rb
       create  config/initializers/inflections.rb
@@ -34,13 +34,13 @@ ruby-1.8.7-p352@demo1 the_demo: rails new blog
       create  config/locales
       create  config/locales/en.yml
       create  config/boot.rb
-      create  config/database.yml
+-->   create  config/database.yml
       create  db
-      create  db/seeds.rb
+-->   create  db/seeds.rb
       create  doc
-      create  doc/README_FOR_APP
+-->   create  doc/README_FOR_APP
       create  lib
-      create  lib/tasks
+-->   create  lib/tasks
       create  lib/tasks/.gitkeep
       create  lib/assets
       create  lib/assets/.gitkeep
@@ -71,7 +71,7 @@ ruby-1.8.7-p352@demo1 the_demo: rails new blog
       create  vendor/assets/stylesheets/.gitkeep
       create  vendor/plugins
       create  vendor/plugins/.gitkeep
-         run  bundle install
+-->      run  bundle install
 Fetching source index for http://rubygems.org/
 Using rake (0.9.2) 
 Using multi_json (1.0.3) 

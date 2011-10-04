@@ -1,0 +1,30 @@
+ruby-1.8.7-p352@demo1 blog: rails generate scaffold post title:string content:text author:belongs_to
+      invoke  active_record
+-->   create    db/migrate/20111004221927_create_posts.rb
+-->   create    app/models/post.rb
+      invoke    test_unit
+-->   create      test/unit/post_test.rb
+      create      test/fixtures/posts.yml
+-->    route  resources :posts
+      invoke  scaffold_controller
+-->   create    app/controllers/posts_controller.rb
+      invoke    erb
+-->   create      app/views/posts
+-->   create      app/views/posts/index.html.erb
+-->   create      app/views/posts/edit.html.erb
+-->   create      app/views/posts/show.html.erb
+-->   create      app/views/posts/new.html.erb
+-->   create      app/views/posts/_form.html.erb
+      invoke    test_unit
+-->   create      test/functional/posts_controller_test.rb
+      invoke    helper
+      create      app/helpers/posts_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/posts_helper_test.rb
+      invoke  assets
+      invoke    coffee
+-->   create      app/assets/javascripts/posts.js.coffee
+      invoke    scss
+-->   create      app/assets/stylesheets/posts.css.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.css.scss

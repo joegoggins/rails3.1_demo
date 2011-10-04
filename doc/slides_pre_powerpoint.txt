@@ -1,13 +1,14 @@
 Build a blog demo (with Rails 3.1)
-  pre-cursor
+  pre_cursor
 
-  create a new app with one model and one controller
-    rails new blog
-    rails generate scaffold post title:string content:text
-    mention the database.yml 
-    rake db:create
-    rake db:migrate
-    
+  overview (For each: do and inspect output)
+    Make an app (create_new_app.txt)
+      rails new blog
+    Generate a Posts scaffold (generate_scaffold.txt)
+      rails generate scaffold
+    Build/Migrate the data base (the_database.txt)
+      rake db:create, rake db:migrate, database.yml
+
   static inspect what happened
     Gemfile + Gemfile.lock
     routes
