@@ -1,0 +1,50 @@
+Build a blog demo (with Rails 3.1)
+  pre-cursor
+
+  create a new app with one model and one controller
+    rails new blog
+    rails generate scaffold post title:string content:text
+    mention the database.yml 
+    rake db:create
+    rake db:migrate
+    
+  static inspect what happened
+    Gemfile + Gemfile.lock
+    routes
+    model
+    view
+    controller
+    migration file
+    database table
+    scss & coffee (quick)
+    helpers      
+
+  fire it up
+
+  dynamic inspection
+    rake routes
+    rake test
+  
+  look at the tests
+    controller tests
+    model tests
+  
+  TDD with one method
+    the_method_that_returns_false
+    add the test see the error
+    add the method and see the test fail
+    make the method return false and see the test pass
+ 
+  rails console
+
+  rails console --debugger
+  
+  rails server --debugger
+
+
+  
+
+
+
+
+
