@@ -1,0 +1,126 @@
+ruby-1.8.7-p352@demo1 blog: rake --help
+rake [-f rakefile] {options} targets...
+
+Options are ...
+    -C, --classic-namespace          Put Task and FileTask in the top level namespace
+--> -D, --describe [PATTERN]         Describe the tasks (matching optional PATTERN), then exit.
+    -n, --dry-run                    Do a dry run without executing actions.
+    -e, --execute CODE               Execute some Ruby code and exit.
+    -p, --execute-print CODE         Execute some Ruby code, print the result, then exit.
+    -E, --execute-continue CODE      Execute some Ruby code, then continue with normal task processing.
+    -I, --libdir LIBDIR              Include LIBDIR in the search path for required modules.
+    -N, --no-search, --nosearch      Do not search parent directories for the Rakefile.
+    -P, --prereqs                    Display the tasks and dependencies, then exit.
+    -q, --quiet                      Do not log messages to standard output.
+    -f, --rakefile [FILE]            Use FILE as the rakefile.
+    -R, --rakelibdir RAKELIBDIR      Auto-import any .rake files in RAKELIBDIR. (default is 'rakelib')
+        --rakelib
+    -r, --require MODULE             Require MODULE before executing rakefile.
+        --rules                      Trace the rules resolution.
+    -s, --silent                     Like --quiet, but also suppresses the 'in directory' announcement.
+    -g, --system                     Using system wide (global) rakefiles (usually '~/.rake/*.rake').
+    -G, --no-system, --nosystem      Use standard project Rakefile search paths, ignore system wide rakefiles.
+--> -T, --tasks [PATTERN]            Display the tasks (matching optional PATTERN) with descriptions, then exit.
+--> -t, --trace                      Turn on invoke/execute tracing, enable full backtrace.
+    -v, --verbose                    Log message to standard output.
+    -V, --version                    Display the program version.
+    -W, --where [PATTERN]            Describe the tasks (matching optional PATTERN), then exit.
+    -X, --no-deprecation-warnings    Disable the deprecation warnings.
+    -h, -H, --help                   Display this help message.
+ruby-1.8.7-p352@demo1 blog: rake -D
+-->   rake about
+          List versions of all Rails frameworks and the environment
+
+-->   rake assets:clean
+          Remove compiled assets
+
+-->   rake assets:precompile
+          Compile all the assets named in config.assets.precompile
+
+-->   rake db:create
+          Create the database from config/database.yml for the current Rails.env (use db:create:all to create all dbs in the config)
+
+      rake db:drop
+          Drops the database for the current Rails.env (use db:drop:all to drop all databases)
+
+      rake db:fixtures:load
+          Load fixtures into the current environment's database.  Load specific fixtures using FIXTURES=x,y. Load from subdirectory in test/fixtures using FIXTURES_DIR=z. Specify an alternative path (eg. spec/fixtures) using FIXTURES_PATH=spec/fixtures.
+
+-->   rake db:migrate
+          Migrate the database (options: VERSION=x, VERBOSE=false).
+
+      rake db:migrate:status
+          Display status of migrations
+
+      rake db:rollback
+          Rolls the schema back to the previous version (specify steps w/ STEP=n).
+
+      rake db:schema:dump
+          Create a db/schema.rb file that can be portably used against any DB supported by AR
+
+      rake db:schema:load
+          Load a schema.rb file into the database
+
+      rake db:seed
+          Load the seed data from db/seeds.rb
+
+      rake db:setup
+          Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the db first)
+
+      rake db:structure:dump
+          Dump the database structure to an SQL file
+
+      rake db:version
+          Retrieves the current schema version number
+
+      rake doc:app
+          Generate docs for the app -- also available doc:rails, doc:guides, doc:plugins (options: TEMPLATE=/rdoc-template.rb, TITLE="Custom Title")
+
+-->   rake log:clear
+          Truncates all *.log files in log/ to zero bytes
+
+      rake middleware
+          Prints out your Rack middleware stack
+
+      rake notes
+          Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)
+
+      rake notes:custom
+          Enumerate a custom annotation, specify with ANNOTATION=CUSTOM
+
+      rake rails:template
+          Applies the template supplied by LOCATION=(/path/to/template) or URL
+
+      rake rails:update
+          Update configs and some other initially generated files (or use just update:configs, update:scripts, or update:application_controller)
+
+-->   rake routes
+          Print out all defined routes in match order, with names. Target specific controller with CONTROLLER=x.
+
+      rake secret
+          Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions).
+
+      rake stats
+          Report code statistics (KLOCs, etc) from the application
+
+-->   rake test
+          Runs test:units, test:functionals, test:integration together (also available: test:benchmark, test:profile, test:plugins)
+
+-->   rake test:recent
+          Run tests for recenttest:prepare / Test recent changes
+
+-->   rake test:single
+          Run tests for singletest:prepare
+
+      rake test:uncommitted
+          Run tests for uncommittedtest:prepare / Test changes since last checkin (only Subversion and Git)
+
+      rake time:zones:all
+          Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6
+
+      rake tmp:clear
+          Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:clear)
+
+      rake tmp:create
+          Creates tmp directories for sessions, cache, sockets, and pids
+

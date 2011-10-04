@@ -6,22 +6,24 @@ Build a blog demo (with Rails 3.1)
       rails new blog
     Generate a Posts scaffold (generate_scaffold.txt)
       rails generate scaffold
-    Build/Migrate the data base (the_database.txt)
+    List the tasks a Rails app provides you (rake_tasks.txt)
+      rake -T 
+    Build the database (the_database.txt)
       rake db:create, rake db:migrate, database.yml
 
-  static inspect what happened
-    Gemfile + Gemfile.lock
-    routes
-    model
-    view
-    controller
-    migration file
-    database table
-    scss & coffee (quick)
-    helpers      
+  run_the_app_and_dive_deep
+    Your app is running...and worthless
+      rails server
 
-  fire it up
+    Make it not worthless
+      rm public/index.html
 
+    Now its broken
+      "No route matches [GET] "/""
+
+    Edit config/routes.rb
+      root :to => 'posts#index'
+  
   dynamic inspection
     rake routes
     rake test
