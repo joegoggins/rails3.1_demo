@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  def random
+    @post = Post.all[rand(Post.all.length-1)]
+    render :action => 'show'
+  end
   # GET /posts
   # GET /posts.json
   def index
