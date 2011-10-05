@@ -28,13 +28,13 @@ Options are ...
     -X, --no-deprecation-warnings    Disable the deprecation warnings.
     -h, -H, --help                   Display this help message.
 ruby-1.8.7-p352@demo1 blog: rake -D
--->   rake about
+-#>   rake about
           List versions of all Rails frameworks and the environment
 
--->   rake assets:clean
+-#>   rake assets:clean
           Remove compiled assets
 
--->   rake assets:precompile
+-#>   rake assets:precompile
           Compile all the assets named in config.assets.precompile
 
 -->   rake db:create
@@ -78,7 +78,7 @@ ruby-1.8.7-p352@demo1 blog: rake -D
 
 -->   rake log:clear
           Truncates all *.log files in log/ to zero bytes
-
+(handy to reduce the white noise while "grepping" for a string)
       rake middleware
           Prints out your Rack middleware stack
 
@@ -96,7 +96,7 @@ ruby-1.8.7-p352@demo1 blog: rake -D
 
 -->   rake routes
           Print out all defined routes in match order, with names. Target specific controller with CONTROLLER=x.
-
+(REALLY REALLY HANDY)
       rake secret
           Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions).
 
@@ -106,10 +106,10 @@ ruby-1.8.7-p352@demo1 blog: rake -D
 -->   rake test
           Runs test:units, test:functionals, test:integration together (also available: test:benchmark, test:profile, test:plugins)
 
--->   rake test:recent
+      rake test:recent
           Run tests for recenttest:prepare / Test recent changes
 
--->   rake test:single
+      rake test:single
           Run tests for singletest:prepare
 
       rake test:uncommitted

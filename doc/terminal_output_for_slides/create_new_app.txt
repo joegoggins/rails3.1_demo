@@ -7,27 +7,35 @@ ruby-1.8.7-p352@demo1 the_demo: rails new blog
 -->   create  Gemfile
       create  app
       create  app/assets/images/rails.png
--->   create  app/assets/javascripts/application.js
+-#>   create  app/assets/javascripts/application.js
       create  app/assets/stylesheets/application.css
--->   create  app/controllers/application_controller.rb
+-->   create  app/controllers/application_controller.rb  
+(everything inherits from this)
       create  app/helpers/application_helper.rb
       create  app/mailers
       create  app/models
 -->   create  app/views/layouts/application.html.erb
+(all views get rendered into this)
       create  app/mailers/.gitkeep
       create  app/models/.gitkeep
       create  config
 -->   create  config/routes.rb
+(defines mappings between URLS and your code via REST)
       create  config/application.rb
--->   create  config/environment.rb
+      create  config/environment.rb
       create  config/environments
--->   create  config/environments/development.rb
--->   create  config/environments/production.rb
--->   create  config/environments/test.rb
-      create  config/initializers
+-#>   create  config/environments/development.rb
+-#>   create  config/environments/production.rb
+-#>   create  config/environments/test.rb
+(differentiate behavior between dev and prod:
+ don't send emails in dev or test
+ only enable cahing in prod)
+-#>   create  config/initializers
+(commonly used for monkey patching or defining global constants)
       create  config/initializers/backtrace_silencers.rb
       create  config/initializers/inflections.rb
-      create  config/initializers/mime_types.rb
+-->   create  config/initializers/mime_types.rb
+(i.e. define a .xlsx mime type)
       create  config/initializers/secret_token.rb
       create  config/initializers/session_store.rb
       create  config/initializers/wrap_parameters.rb
@@ -35,12 +43,15 @@ ruby-1.8.7-p352@demo1 the_demo: rails new blog
       create  config/locales/en.yml
       create  config/boot.rb
 -->   create  config/database.yml
+(Mappings between Rails.env and the db to connect to)
       create  db
 -->   create  db/seeds.rb
+(if you app depends on particular data being present)
       create  doc
--->   create  doc/README_FOR_APP
+-#>   create  doc/README_FOR_APP
       create  lib
--->   create  lib/tasks
+-#>   create  lib/tasks
+(define files named <something>.rake and tasks will show up with rake -T)
       create  lib/tasks/.gitkeep
       create  lib/assets
       create  lib/assets/.gitkeep

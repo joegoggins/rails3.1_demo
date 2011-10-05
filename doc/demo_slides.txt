@@ -1,5 +1,20 @@
+Iterative Demo Gameplan
+  * highlight a section in this file
+  * dive in and 
+    * explore stuff in terminal_output_for_slides
+    * poke around Rails code and explain
+    * do stuff on the command line and discuss
+  * return to this file
+  * repeat
+
+At 10:45, stop and break for questions, if there aren't any, keep
+plowing through the if_there_is_time_available section
+
+
 Build a blog demo (with Rails 3.1)
-  pre_cursor
+  precursor (precursor.txt)
+    getting ruby installed
+    getting Rails installed
 
   overview (For each: do and inspect output)
     Make an app (create_new_app.txt)
@@ -9,47 +24,98 @@ Build a blog demo (with Rails 3.1)
     List the tasks a Rails app provides you (rake_tasks.txt)
       rake -D
     Build the database (the_database.txt)
-      rake db:create, rake db:migrate, database.yml
+      rake db:create and rake db:migrate
+      look at migration file
+      look at db
+        id -> auto incrementing primary key
+        timestamps
+      database.yml
 
   run_the_app
     Your app is running...and worthless
       rails server
-
     Make it not worthless
       rm public/index.html
-
     Now its broken
       "No route matches [GET] "/""
-
     Edit config/routes.rb
-      root :to => 'posts#index'
- 
-    Make a couple posts
+-->   root :to => 'posts#index'
 
+    Make a couple posts
 
   get_in_the_guts_of_the_app
     rails console
+      [].methods.sort
+      [].methods.grep
+      something.class
+
     exit
     rails console --debugger
+      def the_loop
+        3.times do |x|
+          debugger
+        end
+      end
     edit Gemfile
     bundle
+
+    go add a dummy method on post with a local var and "debugger"
     rails console --debugger
+
+    go add dummy stuff in posts_controller
     rails server --debugger
 
   test_driven_dev
-    the_method_that_returns_false
+    assert Post.the_method_that_returns_false == false
     see the error
+    implement Post.the_method_that_returns_false
     add the method and see the test fail
-    make the method return false and see the test pass
+    make it return false
+    see the test pass 
 
   if_there_is_time_available
-    Add a model method
-      reversed_name
+    Add a model method and use it in the view
+      reversed_title
+      http://localhost:3000/posts/1
+
+    Add a validation to a model
+      validates :title, :presence => true
+
+    Add a has_many association
+      rails generate model comment content:text post:belongs_to 
+      add has_many :comments to Post
+      populate via console
+      add code in view to show
 
     Add a "random" post route
-       
-    link to the posts page from the new page
-      rake routes
+      http://localhost:3000/posts/random
+      resources :posts do
+        collection do
+          get 'random'
+        end
+      end 
+      def random
+        @post = Post.all[rand(Post.all.length-1)]
+        render :action => 'show'
+      end
 
-    add some javascript
-      application.js
+    link to the random posts page from the post list page
+      rake routes
+      <%= link_to 'THE RANDOM POST', random_posts_path %>
+
+    partial views
+      <%= render :partial => 'some_common_markup' %>
+
+    respond_to block
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render :json => @post }
+        format.xml { render :xml => @post }
+      end
+
+    add some javascript/CoffeeScript
+      alert 'hi' in posts.js.coffee (not alert('hi');)
+
+
+  Questions!
+  
