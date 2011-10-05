@@ -74,19 +74,6 @@ Build a blog demo (with Rails 3.1)
     see the test pass 
 
   if_there_is_time_available
-    Add a model method and use it in the view
-      reversed_title
-      http://localhost:3000/posts/1
-
-    Add a validation to a model
-      validates :title, :presence => true
-
-    Add a has_many association
-      rails generate model comment content:text post:belongs_to 
-      add has_many :comments to Post
-      populate via console
-      add code in view to show
-
     Add a "random" post route
       http://localhost:3000/posts/random
       resources :posts do
@@ -102,6 +89,19 @@ Build a blog demo (with Rails 3.1)
     link to the random posts page from the post list page
       rake routes
       <%= link_to 'THE RANDOM POST', random_posts_path %>
+
+    Add a model method and use it in the view
+      reversed_title
+      http://localhost:3000/posts/1
+
+    Add a validation to a model
+      validates :title, :presence => true
+
+    Add a has_many association
+      rails generate model comment content:text post:belongs_to 
+      add has_many :comments to Post
+      populate via console
+      add code in view to show
 
     partial views
       <%= render :partial => 'some_common_markup' %>
