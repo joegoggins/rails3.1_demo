@@ -10,6 +10,13 @@ class Post < ActiveRecord::Base
 
 
 
+  def self.the_method_that_returns_false
+    false
+  end
+
+
+
+
   def reversed_title
     self.title.reverse
   end
